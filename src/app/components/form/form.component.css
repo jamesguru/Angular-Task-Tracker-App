@@ -1,0 +1,38 @@
+.cont{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-evenly;
+
+
+    background-color: aqua;
+}
+
+.links{
+
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.link-item{
+
+
+    margin-right: 20px;
+
+    transition: all 1s ease;
+}
+
+.link-item:hover{
+
+
+    transform: scale(1.3);
+
+
+    cursor: pointer;
+}
+
+
