@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 import { Task } from 'src/app/Task';
 
@@ -14,8 +14,9 @@ export class TaskItemComponent implements OnInit {
 
   @Input() task!: Task;
 
-  @Input() color: string = 'red';
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
 
+  
   faTimes = faTimes;
 
 
@@ -30,7 +31,7 @@ export class TaskItemComponent implements OnInit {
   onDelete(task:Task){
 
 
-    console.log(task);
+    this.onDeleteTask.emit(task);
 
 
   }
